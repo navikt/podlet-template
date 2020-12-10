@@ -10,3 +10,4 @@ Man bør gjøre følgende ved å bruke dette templatet:
     - `podlet.js`
 3. Sett `namespace` og `team` i **nais/dev/vars.yaml**
 4. Sett rett `codeowner` i **CODEOWNERS**
+5. Legg til NAIS deploy key

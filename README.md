@@ -22,8 +22,9 @@ Når du har sjekket ut koden, kan du gjøre følgende for å få en ny og funger
     - `podlet.js`
 3. Sett `namespace` og `team` i `nais/dev/vars.yaml`
 4. Sett rett `codeowner` i `CODEOWNERS`
-5. Legg til NAIS deploy key
-6. Bytt ut port 7100 med noe annet hvis du skal kjøre podleten sammen med andre podlets lokalt
+5. Bytt ut port 7100 med noe annet hvis du skal kjøre podleten sammen med andre podlets lokalt
+6. Legg til NAIS deploy key
+7. Husk å kommentere inn deploy-jobben i `.github/workflows/deploy.yml`.
 
 ## Lokal kjøring
 

@@ -18,7 +18,7 @@ Når du har sjekket ut koden, kan du gjøre følgende for å få en ny og funger
 1. Bytte ut `podlet-template` med ditt podletnavn overalt
 2. Sette riktig `basepath` følgende steder:
     - `.github/workflows/deploy.yml`
-    - `.github/workflows/vars.yml`
+    - `nais/dev/vars.yml`
     - `podlet.js`
 3. Sett `namespace` og `team` i `nais/dev/vars.yaml`
 4. Sett rett `codeowner` i `CODEOWNERS`

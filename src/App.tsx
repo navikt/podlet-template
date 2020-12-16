@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from "react";
 import "./App.css";
 import Panel from "nav-frontend-paneler";
 import Navn from "./components/navn";
 import Status from "./components/status";
+import useSWR from "swr";
+import { AuthResponse, authUrl, fetcher } from "./api";
 
 function App() {
-  const [name, setName] = useState("");
-  useEffect(() => {
-    fetch("https://api.nav.no/dittnav-api/personalia/navn", { credentials: "include" })
-      .then((resp) => resp.json())
-      .then((json) => setName(json.navn));
-  }, []);
+  const { data: auth } = useSWR<AuthResponse>(authUrl, fetcher);
 
   return (
     <div className="podlet-template">
       <Panel border>
-        <Navn navn={name} />
+        <Navn navn={auth?.name} />
         <Status status={"registrert som arbeidssøker"} />
       </Panel>
     </div>

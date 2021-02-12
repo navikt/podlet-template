@@ -48,7 +48,8 @@
     "refresh": "rm -rf node_modules && rm package-lock.json && npm i",
     "typeCheck": "tsc",
     "lint": "eslint --ext .tsx,.js,.ts,.jsx src",
-    "podlet": "node podlet.js"
+    "podlet": "node podlet.js",
+    "bump": "npx npm-check-updates --target minor -u && npm i"
   },
   "eslintConfig": {
     "plugins": [

@@ -13,7 +13,16 @@ import path from "path";
 export default {
   input: "src/index.tsx",
   plugins: [
-    importmap(),
+    importmap({
+      maps: [
+        {
+          imports: {
+            react: "https://neik.dev.intern.nav.no/npm/@pika/react/v16/package/source.production.js",
+            "react-dom": "https://neik.dev.intern.nav.no/npm/@pika/react-dom/v16/source.bundle.production.js",
+          },
+        },
+      ],
+    }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production"),
     }),

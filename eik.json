@@ -1,9 +1,0 @@
-{
-  "name": "podlet-template",
-  "version": "1.0.0",
-  "server": "https://neik.dev.intern.nav.no",
-  "import-map": "https://neik.dev.intern.nav.no/map/podlet/v1",
-  "files": {
-    "index.js": "dist/bundle.esm.js"
-  }
-}

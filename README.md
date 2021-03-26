@@ -9,7 +9,7 @@ Følgende er satt opp:
 - [podlet-endepunkter](https://podium-lib.io/docs/podlet/getting_started) i express
 - [msw](https://mswjs.io/) for mocking av API-kall med serviceworker
 - [testing-library](https://testing-library.com/) for testing av komponenter
-- [sentry](https://sentry.io/) for å logge feil fra frontend
+- [sentry](https://sentry.io/) for å logge feil fra frontend er satt opp i layoutserver
 - Nais-deployment oppset med Dockerfile
 
 ## Kom i gang
@@ -25,9 +25,8 @@ Når du har sjekket ut koden, kan du gjøre følgende for å få en ny og funger
 3. Sett `namespace` og `team` i `nais/dev/vars.yaml`
 4. Sett rett `codeowner` i `CODEOWNERS`
 5. Bytt ut port 7100 med noe annet hvis du skal kjøre podleten sammen med andre podlets lokalt
-6. Sett opp sentry på [sentry.gc.nav.no](https://sentry.gc.nav.no/). Legg inn url i [index.tsx](src/index.tsx)
-7. Legg til NAIS deploy key
-8. Husk å kommentere inn deploy-jobben i `.github/workflows/deploy.yml`.
+6. Legg til NAIS deploy key
+7. Husk å kommentere inn deploy-jobben i `.github/workflows/deploy.yml`.
 
 ## Lokal kjøring
 

@@ -4,7 +4,8 @@ Template for en [podium-lib](https://podium-lib.io)-podlet med React, TypeScript
 
 Følgende er satt opp:
 
-- [craco](https://www.npmjs.com/package/@craco/craco)
+- [rollup](https://rollupjs.org/)
+- [neik](https://github.com/navikt/neik)
 - [nav-frontend](https://github.com/navikt/nav-frontend-moduler)
 - [podlet-endepunkter](https://podium-lib.io/docs/podlet/getting_started) i express
 - [msw](https://mswjs.io/) for mocking av API-kall med serviceworker

@@ -17,8 +17,8 @@ export default {
       maps: [
         {
           imports: {
-            react: "https://neik.dev.intern.nav.no/npm/@pika/react/v16/package/source.production.js",
-            "react-dom": "https://neik.dev.intern.nav.no/npm/@pika/react-dom/v16/source.bundle.production.js",
+            react: "https://neik.dev.intern.nav.no/npm/@esm-bundle/react/v17/package/index.js",
+            "react-dom": "https://neik.dev.intern.nav.no/npm/@esm-bundle/react-dom/v17/package/index.js",
           },
         },
       ],

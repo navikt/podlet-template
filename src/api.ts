@@ -5,10 +5,20 @@ function getEnvironment(): "production" | "development" {
   return "development";
 }
 
-export const fetcher = async (url: string) => {
-  const response = await fetch(url, { method: "GET", credentials: "include" });
-  const data = await response.json();
-  return data;
+const checkResponse = (response) => {
+  if (!response.ok) {
+    throw new Error("Fetch request failed");
+  }
+};
+
+export const fetcher = async ({ queryKey }) => {
+  const response = await fetch(queryKey, {
+    method: "GET",
+    credentials: "include",
+  });
+  checkResponse(response);
+
+  return response.json();
 };
 
 type EnvUrl = { development: string; production: string };

@@ -6,12 +6,13 @@ import { authUrl, fetcher } from "./api";
 import { useQuery } from "react-query";
 
 function App() {
-  const { data, error } = useQuery(authUrl, fetcher);
+  const { data } = useQuery(authUrl, fetcher);
+  const navnPaaBruker = data?.name;
 
-  return data?.name ? (
+  return navnPaaBruker ? (
     <div className="podlet-template">
       <Panel border>
-        <Navn navn={!data?.name} />
+        <Navn navn={navnPaaBruker} />
         <Status status={"registrert som arbeidssøker"} />
       </Panel>
     </div>

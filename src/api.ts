@@ -1,3 +1,5 @@
+import { QueryFunctionContext, QueryKey } from "react-query";
+
 function getEnvironment(): "production" | "development" {
   if (process.env.NODE_ENV === "production") {
     return "production";
@@ -5,14 +7,14 @@ function getEnvironment(): "production" | "development" {
   return "development";
 }
 
-const checkResponse = (response) => {
+const checkResponse = (response: any) => {
   if (!response.ok) {
     throw new Error("Fetch request failed");
   }
 };
 
-export const fetcher = async ({ queryKey }) => {
-  const response = await fetch(queryKey, {
+export const fetcher = async (queryFunctionContext: QueryFunctionContext) => {
+  const response = await fetch(queryFunctionContext.queryKey.toString(), {
     method: "GET",
     credentials: "include",
   });

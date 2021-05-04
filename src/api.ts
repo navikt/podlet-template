@@ -1,4 +1,4 @@
-import { QueryFunctionContext, QueryKey } from "react-query";
+import { QueryFunctionContext } from "react-query";
 
 function getEnvironment(): "production" | "development" {
   if (process.env.NODE_ENV === "production") {
